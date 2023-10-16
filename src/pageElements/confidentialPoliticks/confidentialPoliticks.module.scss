@@ -1,0 +1,17 @@
+.politicsMainCOntainer{
+    text-align: justify;
+    width: 90vw;
+    padding: 5vw;
+    h2,
+    h1{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 599px) {
+    .politicsMainCOntainer{
+        h1{
+            font-size: 1.3rem;
+        }
+    }
+    
+}

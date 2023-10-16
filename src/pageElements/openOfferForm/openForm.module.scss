@@ -1,0 +1,193 @@
+@import '../../style.scss';
+
+.offerFormMain {
+    background-color: rgb(22, 22, 25);
+    padding: 2% 0 2% 0;
+    .thankForOffer{
+        padding: 15% 0 15% 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 40%;
+        }
+        .infoGraphickItem{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            span{
+                font-size: 1.2rem;
+            }
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+    .mainContainer {
+        .header {
+            font-size: 1.5rem;
+            margin: 5%;
+            font-weight: 600;
+        }
+
+        .loginForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3%;
+            .createButton{
+                background-color: $accentColor;
+                box-sizing: border-box;
+                padding: 3% 13% 3% 13%;
+                border-radius: 5vw;
+                margin-top: 5%;
+                transition-duration: .5s;
+                border: 8px  solid $accentColor;
+                cursor: pointer;
+            }
+
+            .createButton:hover {
+                // font-size: xx-large;
+                // scale: 1.2;
+                box-sizing: border-box;
+                border: 8px  solid rgba(255, 255, 255, 0.8);
+            }
+
+            input {
+                box-sizing: border-box;
+                width: 70%;
+                line-height: 4rem;
+                text-align: center;
+                border-radius: 5vw 5vw 5vw 5vw;
+                margin: 2%;
+                border: 5px solid $accentColor;
+                border-radius: 0;
+                touch-action: none;
+                font-size: 16px;
+            }
+
+            input::placeholder {
+                text-align: center;
+                color: rgba(0, 0, 0, 0.447);
+            }
+
+            .selected {
+                box-sizing: border-box;
+                width: 70%;
+                padding: 0;
+                background-color: white;
+                border: 5px solid $accentColor;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+                span {
+                    color: rgba(0, 0, 0, 0.447);
+                    font-size: 1rem;
+                    font-weight: 100;
+                    user-select: none;
+                }
+
+                select {
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    width: 50%;
+                    text-align: center;
+                    border-radius: 5vw 5vw 5vw 5vw;
+                    margin: 2%;
+                    border: none;
+                    border-radius: 0;
+                    touch-action: none;
+                    font-size: 1.5rem;
+                    padding: 1%;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 599px) {
+    .offerFormMain {
+        background-color: rgb(22, 22, 25);
+        padding: 2% 0 2% 0;
+    
+        .mainContainer {
+            .header {
+                font-size: 1.5rem;
+                margin: 5%;
+                font-weight: 600;
+            }
+    
+            .loginForm {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 3%;
+    
+                button {
+                    margin-top: 5%;
+                    transition-duration: .5s;
+                    cursor: pointer;
+                }
+    
+                button:hover {
+                    color: rgb(146, 250, 208);
+                    scale: 1.2;
+                }
+    
+                input {
+                    box-sizing: border-box;
+                    width: 90%;
+                    line-height: 4rem;
+                    text-align: center;
+                    border-radius: 5vw 5vw 5vw 5vw;
+                    margin: 2%;
+                    border: 5px solid $accentColor;
+                    border-radius: 0;
+                    touch-action: none;
+                    font-size: 16px;
+                }
+    
+                input::placeholder {
+                    text-align: center;
+                    color: rgba(0, 0, 0, 0.447);
+                }
+    
+                .selected {
+                    box-sizing: border-box;
+                    width: 90%;
+                    padding: 0;
+                    background-color: white;
+                    border: 5px solid $accentColor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+    
+                    span {
+                        color: rgba(0, 0, 0, 0.447);
+                        font-size: 1rem;
+                    }
+    
+                    select {
+                        box-sizing: border-box;
+                        width: 50%;
+                        text-align: center;
+                        border-radius: 5vw 5vw 5vw 5vw;
+                        margin: 2%;
+                        border: none;
+                        border-radius: 0;
+                        touch-action: none;
+                        font-size: 1.2rem;
+                        padding: 1%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+// Імпортуємо шрифт Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro&display=swap');
+
+*{
+  overflow-x: none;
+}
+
+// Встановлюємо шрифт для всього документа
+body {
+  position: relative;
+  font-family:'Roboto', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+}
+
+$accentColor: rgb(32, 122, 95);
+$buttonsColor: rgb(32, 113, 167);

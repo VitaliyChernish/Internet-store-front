@@ -1,0 +1,185 @@
+.createButton {
+    font-size: x-large;
+    font-weight: 800;
+    margin-top: 2%;
+    cursor: pointer;
+    color: white !important;
+    transition-duration: .5s;
+    background-color: rgba(0, 128, 0, 0.459);
+    padding: 1%;
+    border-radius: 1vw;
+}
+.createButton:hover{
+    background-color: green;
+}
+.formMain {
+    width: 80vw;
+    padding: 2%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: rgb(46, 46, 46);
+    h1{
+        color: rgba(5, 189, 5, 0.466);
+    }
+    .loginForm{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        color: #eee;
+        font-size: 2rem;
+        .field{
+            display: flex;
+            justify-content: flex-end;
+            margin: 1% 0 0 1%;
+            width: 45%;
+            label{
+                font-size: x-large;
+            }
+            .input{
+                font-size: 1.5vw;
+                margin-left: 1vw;
+            }
+        }
+        button{
+            color: rgba(5, 189, 5, 0.466);
+        }
+        button:hover{
+            color: rgb(255, 255, 255);
+        }
+    }
+    .headerAndExit {
+        display: flex;
+        justify-content: space-between;
+        font-size: x-large;
+        font-weight: 800;
+        color: gray;
+        .exitButton {
+            cursor: pointer;
+            transition-duration: .5s;
+        }
+
+        .exitButton:hover {
+            color: #eee;
+            scale: 1.2;
+        }
+    }
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .mainInfo {
+        margin-top: 5vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 45vw;
+    }
+
+    .leftVidget {
+        margin-top: 5vw;
+        width: 20vw;
+
+        .leftVidgetItem {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            font-size: 1.5vw;
+            line-height: 1.5vw;
+            transition-duration: .5s;
+            box-shadow: -1px .5px 1px 0 rgba(0, 0, 0, 0.247);
+            color: rgb(154, 155, 156);
+            cursor: pointer;
+
+            .icon,
+            .title {
+                transition-duration: .5s;
+                margin: .5vw;
+                padding: .5vw;
+            }
+        }
+
+        .leftVidgetItem:hover {
+            transform: translate(5px, -5px);
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+
+            .title {
+                color: #eee;
+            }
+
+            .icon {
+                color: rgba(255, 255, 255, 0.356);
+            }
+        }
+    }
+}
+
+.clientCards{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    max-height: 70vh;
+    overflow: auto;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.offerCards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.checkboxContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .checkboxLabel {
+    margin-right: 0rem;
+    font-size: 2rem;
+    color: #fafafa;
+    padding: 1%;
+    background-color: rgb(22, 22, 23, .9);
+    border-radius: 1vw;
+  }
+  
+  .checkboxInput {
+    appearance: none;
+    width: 56px;
+    height: 56px;
+    border: 3px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    padding: 2%;
+    background-color: rgb(22, 22, 23, .9);
+  
+    &:checked {
+      background-color: #333;
+    }
+  
+    &:checked::before {
+      content: "\2713"; /* Відображення галочки */
+      position: absolute;
+      font-size: 52px;
+      color: rgb(0, 250, 12);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .showHideOffers{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }

@@ -1,0 +1,43 @@
+@import '../../style.scss';
+
+button {
+    font-size: x-large;
+    font-weight: 900;
+    color: white;
+    background: none;
+    border: none;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.466);
+}
+.buttonContainerMain {
+    position: relative;
+    top: 2vh;
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.919);
+    background-image: url('../../pages/apiCamera/statik/lightning.png');
+    // background-image: linear-gradient(to left, rgba(0, 128, 0, 0), $accentColor, $accentColor, rgba(0, 128, 0, 0));
+    z-index: 901;
+    border-radius: 10px;
+    transition-duration: .5s;
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.864);
+    cursor: pointer;
+}
+.buttonContainerMain:hover{
+    scale: 1.1;
+    box-shadow: 0 0px 15px 0px $buttonsColor;
+}
+
+
+
+
+@media screen and (min-width: 1199px) {
+    .buttonContainerMain {
+        // padding: 2vw;
+        // padding-left: 5vw;
+        // padding-right: 5vw;
+        margin: 2vw;
+    }
+}

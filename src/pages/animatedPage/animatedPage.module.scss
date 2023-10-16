@@ -1,0 +1,11 @@
+@import '../../style.scss';
+
+.mapMain{
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    img{
+        height: 100vh;
+    }
+}

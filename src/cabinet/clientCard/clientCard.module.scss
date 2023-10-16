@@ -1,0 +1,100 @@
+.clientCardMain {
+    width: 100%;
+    height: fit-content;
+    background-color: #ccc;
+    border: 2px solid black;
+    border-radius: 1vw;
+    padding: 2%;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    .clientCardUpper,
+    .clientCard{
+        display: flex;
+        flex-direction: row;
+        .element {
+            width: 15%;
+            text-align: center;
+            overflow: scroll;
+    
+            .header {
+                font-size: large;
+                font-weight: 600;
+                line-height: 150%;
+                background-color: rgba(0, 0, 0, 0.196);
+            }
+    
+            .value {
+                font-size:medium;
+                line-height: 150%;
+                background-color: rgba(0, 0, 0, 0.096);
+            }
+    
+            .delete {
+                font-size: large;
+                line-height: 150%;
+                background-color: rgba(255, 0, 0, 0.329);
+                cursor: pointer;
+                border-radius: 10px;
+            }
+    
+            .delete:hover {
+                background-color: rgba(255, 0, 0, 1);
+            }
+    
+            .update {
+                font-size: large;
+                line-height: 150%;
+                background-color: rgba(46, 139, 86, 0.288);
+                cursor: pointer;
+                border-radius: 10px;
+            }
+    
+            .update:hover {
+                background-color: rgba(46, 139, 86, 1);
+            }
+        }
+    }
+}
+
+.confirmationModal{
+    width: 40vw;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    background-color: rgb(44, 44, 46);
+    border: 20px solid black;
+    padding: 5%;
+    color: white;
+    border-radius: 2vw;
+    p{
+        font-size: 1.5rem;
+    }
+    .buttonsBlock{
+        display: flex;
+        justify-content: space-evenly;
+        button{
+            color: black;
+            cursor: pointer;
+            transition-duration: .5s;
+            padding: 5%;
+            border-radius: 2vw;
+        }
+        button[data-type="confirm"] {
+            background-color: green;
+            color: white;
+        }
+        button[data-type="cancel"] {
+            background-color: red;
+            color: white;
+        }
+        button:hover{
+            background: none;
+            scale: 1.1;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.mainBlock {
+    margin: 1vh 0 1vh 0;
+    .mainpageBatton {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        transition-duration: .5s;
+        span{
+            display: inline-block;
+            padding: 10% 0 10% 0;
+            font-size: 3rem;
+            color: white;
+            transition-duration: .5s;
+        }
+    }
+    .mainpageBatton:hover{
+        background-color: rgb(42, 42, 43) !important; 
+        span{
+            scale: 1.05;
+        }
+    }
+}

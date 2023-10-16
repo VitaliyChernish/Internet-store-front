@@ -1,0 +1,114 @@
+@import '../../../style.scss';
+
+.quizzMain{
+    .quizz{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        overflow-y: hidden;
+        button{
+            color: white;
+            font-size:2rem;
+            width: 50%;
+            padding-top: 18vh;
+            padding-bottom: 18vh;
+            background-color: rgba(77, 77, 77, 0.267);
+            transition-duration: .5s;
+            text-align: center;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgba(77, 77, 77, 0.867);
+        }
+        .asks{
+            padding: 5vh;
+            font-size: 2rem;
+            font-weight: 100;
+            background-color: $accentColor;
+            background-image: url('../statik/lightning.png');
+        }
+        .unswers{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .imageQuiz{
+            position: absolute;
+            top: 17vh;
+            width: 100%;
+            z-index: -1;
+        }
+        .descriptions{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            .descriptionItems{
+                text-align: start;
+                margin: 4.3vh;
+                font-size: 1.2rem;
+                font-weight: 100;
+                background-color: rgba(77, 77, 77, 0.923);
+                padding: 1vh;
+                .head{
+                    color: white;
+                    background-image: linear-gradient(to right, red, rgba(0, 0, 0, 0));
+                    // border: 5px solid $accentColor;
+                    padding: .5vh;
+                }
+                .descrs{
+                    color: rgba(255, 255, 255, 0.747);
+                }
+                img{
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    left: -28%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 599px) {
+        .quizz{
+            
+            .asks{
+                font-size: 1.2rem;
+            }
+            .unswers{
+                button{
+                    
+                }
+            }
+            .imageQuiz{
+                position: absolute;
+                bottom: 0vh;
+                width: 120%;
+                left: -10%;
+                z-index: -1;
+            }
+            .descriptions{
+                .descriptionItems{
+                    background-image: url('../statik/lightning.png');
+                    font-size: 1rem;
+                    margin: 3.3vh;
+                    .head{
+                    }
+                    .descrs{
+                        font-size: small;
+                    }
+                    img{
+                        position: absolute;
+                        height: 100%;
+                        top: 0;
+                        left: -50%;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}

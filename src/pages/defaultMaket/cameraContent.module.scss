@@ -1,0 +1,666 @@
+@import '../../style.scss';
+
+.mainBlock {
+    position: relative;
+    max-width: 600px !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headerMain {
+    position: relative;
+    top: 0;
+    max-width: 600px;
+    font-size: xx-large;
+    color: white;
+    padding: 1vw;
+    background-color: rgb(77, 77, 77);
+    // background-image: url('./statik/lightningOpaciti.jpg');
+    background-image: url('./statik/lightning.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .headerAndPrice {
+
+        .headdd {
+            font-size: 1.5rem;
+            line-height: 2;
+            display: flex;
+            justify-content: space-evenly;
+
+            span {
+                display: block;
+                text-shadow: 5px 5px 8px rgb(0, 0, 0);
+            }
+        }
+    }
+
+    @media screen and (max-width: 599px) {
+        .headdd {
+            font-size: 1.2rem !important;
+        }
+    }
+}
+
+.content1Main {
+    position: relative;
+    max-width: 600px !important;
+    // border: 30px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+
+    .iconsTop {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 600px !important;
+
+        .icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 24%;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            span {
+                font-size: medium;
+                white-space: normal;
+                font-weight: 100;
+            }
+        }
+    }
+
+    .content1ImageBackground {
+        width: inherit;
+        height: auto;
+        max-width: 600px !important;
+    }
+
+    .promotionAttentionContainer {
+        position: absolute;
+        top: 16%;
+        left: 5%;
+        width: 170px;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 20px solid rgba(255, 255, 255, 0.551);
+        border-radius: 50%;
+        animation: borderAnimation 1.5s ease-in infinite;
+        overflow-y: hidden;
+
+        .promotionAttention {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            border: 15px solid white;
+            transform: rotate(-15deg);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+            .promotionHeader,
+            .promotionDescription {
+                font-size: large;
+                font-weight: 100;
+                color: white;
+            }
+
+            .promotionPercent {
+                font-size: 3.5rem;
+                font-family: Impact;
+                color: white;
+                font-weight: 100;
+            }
+        }
+    }
+
+    @keyframes borderAnimation {
+        0% {
+            border: 20px solid rgba(255, 255, 255, 0.151);
+        }
+
+        50% {
+            border: 20px solid rgba(255, 255, 255, 0);
+        }
+
+        100% {
+            border: 20px solid rgba(255, 255, 255, 0.151);
+        }
+    }
+
+}
+
+.content2Main {
+    position: relative;
+    max-width: 600px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .timeLeft {
+        position: absolute;
+        top: 78%;
+        width: 70%;
+        height: 30vh;
+        // transform: rotate(-15deg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 500px) {
+        .timeLeft {
+            width: 90vw;
+        }
+    }
+
+    .topImage {
+        max-width: 600px;
+        // margin-top: 20vh;
+        // margin-bottom: 20vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        line-height: 2.5;
+
+        .descriptions {
+            background-color: rgb(77, 77, 77);
+            background-image: url('./statik/lightning.png');
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem;
+            font-weight: 100;
+            text-align: start;
+            color: white;
+
+            .listItem {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                    margin-top: 3%;
+                    margin-right: 25px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .descriptions {
+                font-size: 1.2rem;
+            }
+        }
+
+        h2 {
+            background-color: $accentColor;
+            background-image: url('./statik/lightning.png');
+            color: white;
+        }
+
+        li {
+            list-style-type: decimal;
+        }
+
+        img {
+            max-width: 600px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 500px) {
+        .topImage {
+            font-size: 1.2rem;
+        }
+    }
+
+    .topContent {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        .newPrice,
+        .oldPrice {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 0, 0, 0.171);
+            border-left: none;
+            padding-top: 3vh;
+            padding-bottom: 3vh;
+
+            .old {
+                font-size: large;
+                font-weight: 100;
+            }
+
+            .price {
+                font-size: xx-large;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-weight: 100;
+            }
+        }
+
+        .newPrice {
+            border-right: none;
+
+            .old {
+                color: white;
+                padding: 5px;
+                border-radius: 5px;
+                animation: promotion 1s ease-out infinite;
+            }
+
+            @keyframes promotion {
+                0% {
+                    background-color: rgba(255, 0, 0, 1);
+                    scale: 1.1;
+                }
+
+                50% {
+                    background-color: rgba(255, 0, 0, 0.364);
+                    scale: 1;
+                }
+
+                100% {
+                    scale: 1.1;
+                    background-color: rgba(255, 0, 0, 1);
+                }
+            }
+        }
+    }
+
+    .buttonOfferAndDescription {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(77, 77, 77);
+        border-top: none;
+        border-bottom: none;
+        box-sizing: border-box;
+        user-select: none;
+        background-image: url('./statik/lightning.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .descriptions {
+            margin: 0;
+            padding: 0;
+            margin-top: 2vh;
+            font-size: 1.5rem;
+            line-height: 2.5;
+            font-weight: 100;
+            text-align: start;
+            color: white;
+
+            .listItem {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                    margin-top: 3%;
+                    margin-right: 25px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .descriptions {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .priority {
+        max-width: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(77, 77, 77);
+        background-image: url('./statik/lightning.png');
+
+        .priorityArr {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-weight: 100;
+            padding-top: 3vh;
+            padding-bottom: 3vh;
+            justify-content: center;
+            width: 33%;
+            font-size: small;
+            color: white;
+
+            img {
+                width: 60px;
+                height: 60px;
+                opacity: .5;
+            }
+
+            span {
+                width: 50%;
+            }
+        }
+    }
+
+    .bottomIcons {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 600px !important;
+        background-color: rgb(77, 77, 77);
+        background-image: url('./statik/lightning.png');
+        box-shadow: 0 10px 10px 0 gray;
+        color: white;
+        font-weight: 100;
+
+        .icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 24%;
+
+            img {
+                width: 50px;
+                height: 50px;
+                opacity: .5;
+            }
+
+            span {
+                font-size: large;
+                white-space: normal;
+                font-size: small;
+                margin-top: 1vh;
+            }
+        }
+    }
+}
+
+.content3Main {
+    position: relative;
+    max-width: 600px !important;
+    max-height: 566px !important;
+
+    video {
+        max-width: 600px;
+        max-height: 566px !important;
+    }
+
+    video::placeholder {
+        background-color: red !important;
+        max-height: 566px !important;
+    }
+
+    .videoJS {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 600px;
+        max-height: 566px !important;
+    }
+
+}
+
+.content4Main {
+    position: relative;
+    left: 0;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        background-color: red;
+        color: white;
+        font-weight: 100;
+        border-radius: 5px;
+        border: 5px solid red;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.521);
+    }
+
+    .listItems {
+        display: flex;
+        flex-direction: column;
+
+        .arrMap {
+            // background-color: rgb(77, 77, 77);
+            margin: 0;
+            padding: 0;
+            position: relative;
+            left: 0;
+
+            .listItem {
+                position: relative;
+                overflow-wrap: break-word;
+                text-align: start;
+                color: rgba(0, 0, 0, 0.712);
+                font-weight: 100;
+                background-image: url('./statik/lightning.png');
+
+                .marker {
+                    background-image: linear-gradient(to right, red, red, rgba(255, 0, 0, 0));
+                    // border: 5px solid red;
+                    padding: 3vh;
+                    padding-left: 1vh;
+                    color: white;
+                    font-weight: 100;
+                    // box-shadow: 5px 5px 10px black;
+                }
+
+                img {}
+
+                span {
+                    padding: 0 !important;
+                    padding-left: 10px !important;
+                    display: inline-block;
+                    font-size: 1.8rem;
+                    line-height: 2;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 599px) {
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .listItems {
+            font-size: large;
+
+            .arrMap {
+                .listItem {
+                    span {
+                        font-size: 1.1rem;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.content5Main {
+    position: relative;
+
+    .futures {
+        background-color: rgb(77, 77, 77);
+        background-image: url('./statik/lightning.png');
+        color: white;
+
+        h2 {
+            font-weight: 100;
+        }
+    }
+
+    .allAttributeListContainer {
+        overflow: hidden;
+        transition-duration: 2s;
+
+        .allAttributeList {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 1rem;
+            font-size: 1rem;
+
+            .left,
+            .right {
+                width: 50%;
+                text-align: start;
+            }
+
+            .left {
+                .headerStyle {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+
+    .buttonAllFeatures {
+        position: relative;
+        background-color: rgb(77, 77, 77);
+        background-image: url('./statik/lightning.png');
+        border-radius: 0 0 5px 5px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        h2 {
+            font-weight: 100;
+        }
+        .triangleDown {
+            position: absolute;
+            top: 3vh;
+            width: 0;
+            height: 0;
+            border-bottom: 15px solid transparent;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-top: 36.6px solid rgba(116, 32, 32, 0.267); 
+            box-shadow: 0 -20px 15px -15px rgba(0, 0, 0, 0.507);
+            animation: triangleAnimation 2s ease-out infinite;
+          }
+          @keyframes triangleAnimation {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: .5;
+            }
+            100%{
+                opacity: 1;
+            }
+          }
+          .triangleUp {
+            position: absolute;
+            bottom: 3vh;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 36.6px solid rgba(116, 32, 32, 0.267); 
+            box-shadow: 0 20px 15px -15px rgba(0, 0, 0, 0.507);
+            animation: triangleAnimation 2s ease-out infinite;
+          }
+    }
+
+    @media screen and (max-width: 599px) {
+        .buttonAllFeatures{
+            .triangleDown{
+                top: 4vh;
+            }
+            .triangleUp{
+                bottom: 4vh;
+            }
+        }
+        .left,
+        .right {
+            font-size: .75rem;
+        }
+
+        .left {
+            .headerStyle {
+                font-size: 1.3rem !important;
+            }
+        }
+    }
+}
+
+.bestOfferContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .optPrices,
+    .forWhatPlace{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        line-height: 2;
+        font-size: 1.3rem;
+        span{
+            width: 100%;
+            margin: 1vh;
+            margin-left: 0;
+            margin-right: 0;
+            border: 3px solid rgb(77, 77, 77);
+            font-weight: 800;
+            border-radius: 1vw 0 0 1vw;
+            color: rgba(0, 0, 0, 0.61);
+            // background-color: rgba(153, 2, 2, 0.418);
+        }
+    }
+    .optPrices{
+        align-items: end;
+        span{
+            border: 3px solid rgb(153, 2, 2);
+            background-color: rgba(77, 77, 77, 0.418);
+            color: white;
+            font-weight: 100;
+            border-radius: 0 1vw 1vw 0;
+        }
+    }
+}
