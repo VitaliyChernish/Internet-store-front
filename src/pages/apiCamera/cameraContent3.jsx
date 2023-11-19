@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import s from './cameraContent.module.scss';
 import vidos from './statik/vidos.mp4'
-import videojs from "video.js";
 import VideoPlayer from "./videoPlayer/VideoPlayer";
 
 const CameraContent3 = () => {

@@ -5,84 +5,143 @@
     position: relative;
     width: 100vw !important;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     color: white;
 
-    h1 {
-        width: 70%;
+    .logoContainer {
+        display: flex;
+        margin: 1%;
+
+        img {
+            width: 5vw;
+            height: 5vw;
+        }
+
+        .descriptions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 5vh;
+
+            h1 {
+                text-align: start;
+                font-size: 3vh;
+                padding: 0;
+                margin: 0;
+            }
+
+            h2 {
+                padding: 0;
+                margin: 0;
+                font-size: 2vh;
+            }
+        }
+    }
+
+
+    .form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 2%;
+        left: 5vw;
+
+        label {
+            font-size: small;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            line-height: 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin-top: 1vh;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        input::placeholder {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .createButton {
+            background-color: $accentColor;
+            box-sizing: border-box;
+            transition-duration: .5s;
+            font-size: medium;
+            border: 8px solid $accentColor;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .createButton:hover {
+            box-sizing: border-box;
+            border: 8px solid rgba(255, 255, 255, 0.8);
+        }
     }
 }
 
-.form {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    width: 100%;
-    padding: 2%;
-    left: 5vw;
+@media screen and (max-width: 599px) {
 
-    label {
-        font-size: small;
-    }
-
-    input {
-        display: block;
-        width: 30%;
-        line-height: 3rem;
-        text-align: center;
-        font-size: 1.5rem;
-        margin-top: 1vh;
-        box-sizing: border-box;
-        border: none;
-    }
-
-    input::placeholder {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .createButton {
-        background-color: $accentColor;
-        box-sizing: border-box;
-        transition-duration: .5s;
-        border: 8px solid $accentColor;
-        width: 30vw;
-        cursor: pointer;
-    }
-
-    .createButton:hover {
-        box-sizing: border-box;
-        border: 8px solid rgba(255, 255, 255, 0.8);
-    }
-}
-
-@media screen and (max-width: 1199px) {
-    
     .findOfferCustomerMainBox {
         display: flex;
         flex-direction: row;
         font-size: .5rem;
+        justify-content: space-evenly;
+
+        .logoContainer {
+            display: flex;
+            align-items: center;
+            width: 60%;
+            img {
+                width: 8vw;
+                height: 8vw;
+            }
+
+            .descriptions {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                h1 {
+                    text-align: start;
+                    font-size: 1.8vh;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                h2 {
+                    text-align: start;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 1.6vh;
+                }
+            }
+        }
 
         .customerOfferRenderComponent {
             font-size: .5rem;
             text-align: start;
             margin-left: 0vw;
-            width: 40vw;
+            width: 45%;
         }
 
         .form {
-            width: 40vw;
+            width: 45%;
             position: relative;
             display: flex;
             flex-direction: column;
 
             input,
             .createButton {
-                width: 100%;
+                width: 86%;
                 font-size: 2vw;
                 line-height: 3vw;
                 font-weight: 100;
@@ -151,15 +210,16 @@
 }
 
 @media screen and (max-width: 1199px) {
-    .notFound{
+    .notFound {
         width: 100vw;
     }
+
     .orderRendered {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    
+
         .spansContainer {
             display: flex;
             flex-direction: row;
@@ -167,12 +227,13 @@
             justify-content: center;
             background-color: rgba(128, 128, 128, 0.801);
             width: 100vw;
-            left: 0;            
+            left: 0;
+
             .mainInfo {
                 padding: 2% 0 2% 0;
                 width: 90%;
             }
-    
+
             .number {
                 background-color: gray;
                 width: 10%;
@@ -181,8 +242,8 @@
                 box-sizing: border-box;
                 border-right: 3px solid rgb(22, 22, 23);
             }
-    
+
         }
-    
+
     }
 }

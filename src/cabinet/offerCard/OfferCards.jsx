@@ -27,7 +27,7 @@ const OfferCards = ({
     description
 }) => {
 
-    const url = `${serverApi}:5000/api/offers/updateOffers`;
+    const url = `${serverApi}/api/offers/updateOffers`;
     const [editable, setEditable] = useState(false)
     const { register, handleSubmit } = useForm();
 

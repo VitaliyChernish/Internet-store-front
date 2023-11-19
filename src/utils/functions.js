@@ -42,7 +42,7 @@ export function calc(url, token, formData) {
 }
 
 export function checkAuth(token) {
-  fetch(`${serverApi}:5000/api/user/auth`, {
+  fetch(`${serverApi}/api/user/auth`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ export const parseData = (key) => {
 export const deleteOffer = (event, index) => {
   event.preventDefault();
   event.stopPropagation()
-  const url = `${serverApi}:5000/api/offers/delete/${index}`;
+  const url = `${serverApi}/api/offers/delete/${index}`;
   const token = parseData('token')
 
   fetch(url, {
@@ -88,7 +88,7 @@ export const deleteOffer = (event, index) => {
     });
 }
 export function createOffer(name, link, buyingPrice, oldPrice, newPrice, setTimer, image, descrField) {
-  const url = `${serverApi}:5000/api/offers/createOffers`;
+  const url = `${serverApi}/api/offers/createOffers`;
   const token = parseData('token');
   const formData = new FormData();
 
@@ -122,7 +122,7 @@ export function updateOffer() {
 
   const formData = new FormData();
   const token = parseData('token')
-  const url = `${serverApi}:5000/api/offers/updateOffers`;
+  const url = `${serverApi}/api/offers/updateOffers`;
 
   const arr = Array.from(arguments)
 
@@ -167,7 +167,7 @@ export const createClientData = (data, whatOffer, priceOffer, offerLink, buttonP
   // Форматуємо дату та час у вигляді "години/дні/місяці/роки"
   let formattedDate = `${hours}:${minutes} ${day}/${month}/${year}`;
 
-  fetch(`${serverApi}:5000/api/clients/createClientData`, {
+  fetch(`${serverApi}/api/clients/createClientData`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -199,7 +199,7 @@ export const createClientData = (data, whatOffer, priceOffer, offerLink, buttonP
 
 export function getAllClientData(setCustomerDataFromServer) {
   const token = parseData('token')
-  fetch(`${serverApi}:5000/api/clients/getAllClientData`, {
+  fetch(`${serverApi}/api/clients/getAllClientData`, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`
@@ -216,7 +216,7 @@ export const getOneClientData = (setCustomerDataFromServer, clientPhone) => {
   // event.preventDefault();
   // event.stopPropagation();
   // const clientPhone = '939311710'
-  const url = `${serverApi}:5000/api/clients/getOneClientData/${clientPhone}`;
+  const url = `${serverApi}/api/clients/getOneClientData/${clientPhone}`;
 
   fetch(url, {
     method: 'GET',
@@ -252,7 +252,7 @@ export function updateClientData(
   formData.append('offerConfirmation', offerConfirmation);
   formData.append('offerDetails', offerDetails);
 
-  const url = `${serverApi}:5000/api/clients/updateClientData/${index}`;
+  const url = `${serverApi}/api/clients/updateClientData/${index}`;
 
   fetch(url, {
     method: 'POST',
@@ -275,7 +275,7 @@ export function updateClientData(
 export const deleteClientData = (index) => {
   // event.preventDefault();
   // event.stopPropagation()
-  const url = `${serverApi}:5000/api/clients/deleteClientData/${index}`;
+  const url = `${serverApi}/api/clients/deleteClientData/${index}`;
   const token = parseData('token')
 
   fetch(url, {

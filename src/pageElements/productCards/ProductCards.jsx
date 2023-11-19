@@ -12,7 +12,7 @@ const ProductCards = () => {
     }, [])
 
     function fetchOfferData() {
-        fetch(`${serverApi}:5000/api/offers/getAllOffers`)
+        fetch(`${serverApi}/api/offers/getAllOffers`)
             .then(response => response.json())
             .then(offers => {
                 setOfferData(offers);

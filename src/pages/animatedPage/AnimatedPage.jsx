@@ -1,4 +1,6 @@
+
 import React, { useEffect } from "react";
+import L from "leaflet"; // Імпортуємо об'єкт L з Leaflet
 import s from './animatedPage.module.scss';
 import './animatedPage.scss';
 import ukraineMapMain from './static/ukraineMapMain.webp'
@@ -19,7 +21,8 @@ const AnimatedPage = () => {
     useEffect(() => {
         document.getElementById('zoomInButton').addEventListener('click', animateZoomIn);
         document.getElementById('zoomOutButton').addEventListener('click', animateZoomOut);
-    })
+    }, [map]); // Додайте map в залежності, щоб уникнути помилок оновлення
+
     return (
         <>
             <div className={s.mapMain} id="map">

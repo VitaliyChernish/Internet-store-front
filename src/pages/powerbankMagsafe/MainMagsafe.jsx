@@ -13,12 +13,18 @@ import { v4 as uuidv4 } from 'uuid';
 import { serverApi, FRONTEND_LINK, MAIN_MAGSAFE } from "../../utils/consts";
 import MainButtons from "../../pageElements/mainButtons/MainButons";
 import Footer from "./footer";
+import logo from './statik/batteryIcon.png';
 
 const MainMagsafe = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
     const dispatch = useDispatch(null)
 
     useEffect(() => {
+        let iconLink = document.querySelector('link[rel="icon"]');
+        if (iconLink) {
+            iconLink.href = logo;
+          }
+        document.title = 'MagSafe Battery Pack - безпровідна зарядка.'
         if (localStorage.getItem('magsafeUniqueTocken')) {
             // console.log(localStorage.getItem('magsafeUniqueTocken'))
         } else {
@@ -26,7 +32,7 @@ const MainMagsafe = () => {
             const formData = new FormData();
             formData.append('ip', token);
 
-           fetch(`${serverApi}:5000/api/visit/addVisits`, {
+           fetch(`${serverApi}/api/visit/addVisits`, {
                 method: 'POST',
                 body: formData,
             })
@@ -40,6 +46,7 @@ const MainMagsafe = () => {
     useEffect(() => {
         setScreenWidth(window.innerWidth)
     }, [screenWidth])
+
     useEffect(() => {
         dispatch(goalVariant('Як замовити міні камеру:'))
     }, [])

@@ -11,7 +11,7 @@ const ActionPrices = ({ linkOfOffer, backgrount, fontColor, containerWidth }) =>
     useEffect(() => {
         const encodedLink = encodeURIComponent(linkOfOffer)
         console.log('encodedLink: ', encodedLink)
-        const url = `${serverApi}:5000/api/offers/choicerouter?link=${encodedLink}`;
+        const url = `${serverApi}/api/offers/choicerouter?link=${encodedLink}`;
         fetch(url, {
             method: 'GET',
         })

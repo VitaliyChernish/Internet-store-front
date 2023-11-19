@@ -6,8 +6,13 @@ import { serverApi } from "../../utils/consts";
 const ProductCardsRender = ({ orderData }) => {
     return (
         <Link to={orderData.link} className={s.cardMain}>
-            <div className={s.headerForPhone}><h1>{orderData.description}</h1></div>
-            <img src={`${serverApi}:5000/static/${orderData.image}`} alt="" />
+            <div className={s.headerForPhone}>
+                <div className={s.napePriceContainer}>
+                    <h3>{orderData.description}</h3>
+                    <h3>{orderData.newPrice}<span>грн</span></h3>
+                </div>
+            </div>
+            <img src={`${serverApi}/static/${orderData.image}`} alt="" />
             <div className={s.cardDescription}>
                 <span className={s.description}>{orderData.description}</span>
                 <div className={s.topContentContainer}>

@@ -86,7 +86,7 @@ const ClientCard = ({
                 toggle: false,
                 forBought: offerDetails * offer
             });
-            calc(`${serverApi}:5000/api/offers/updateOffers`, token, formData)
+            calc(`${serverApi}/api/offers/updateOffers`, token, formData)
             updateClientData(
                 '',
                 '',

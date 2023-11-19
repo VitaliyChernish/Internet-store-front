@@ -1,2 +1,65 @@
 @import '../../style.scss';
 
+.footerMainContainer {
+    position: fixed;
+    bottom: 0;
+    width: 100% !important;
+    height: 15vh;
+    color: white;
+    display: flex;
+
+    .footerContentContainer {
+        width: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .workGraphic {
+            span {
+                margin: 1vh;
+            }
+        }
+
+        a {
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .footerMainContainer {
+        position: fixed;
+        bottom: 0;
+        width: 100% !important;
+        height: 15vh;
+        color: white;
+        display: flex;
+
+        .footerContentContainer {
+            width: inherit;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .workGraphic {
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                font-size: small;
+                span {
+                    margin: 1vh;
+                }
+            }
+
+            a {
+                font-size: small;
+                width: min-content;
+                text-align: end;
+                color: white;
+                margin: 1vh;
+            }
+        }
+    }
+}

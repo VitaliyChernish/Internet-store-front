@@ -11,14 +11,14 @@ const Login = () => {
   const navigate = useNavigate();
 
   function loginUser(nameInput, passwordInput) {
-    const url = `${serverApi}:5000/api/user/login`; // URL для логіну
+    const url = `${serverApi}/api/user/login`; // URL для логіну
 
     const userData = {
       nickName: nameInput,
       password: passwordInput,
     };
 
-    fetch(`${serverApi}:5000/api/user/login`, {
+    fetch(`${serverApi}/api/user/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ const Login = () => {
             token: data.token,
             name: data.userName,
             role: data.userRole,
-            avatar: `${serverApi}:5000/static/${data.avatar}`
+            avatar: `${serverApi}/static/${data.avatar}`
           };
           localStorage.setItem('data', JSON.stringify(dataToStore));
           // Перехід лише у випадку успішного входу в систему

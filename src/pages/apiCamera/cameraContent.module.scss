@@ -481,8 +481,6 @@
                     // box-shadow: 5px 5px 10px black;
                 }
 
-                img {}
-
                 span {
                     padding: 0 !important;
                     padding-left: 10px !important;
@@ -566,9 +564,11 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+
         h2 {
             font-weight: 100;
         }
+
         .triangleDown {
             position: absolute;
             top: 3vh;
@@ -577,22 +577,26 @@
             border-bottom: 15px solid transparent;
             border-left: 100px solid transparent;
             border-right: 100px solid transparent;
-            border-top: 36.6px solid rgba(116, 32, 32, 0.267); 
+            border-top: 36.6px solid rgba(116, 32, 32, 0.267);
             box-shadow: 0 -20px 15px -15px rgba(0, 0, 0, 0.507);
             animation: triangleAnimation 2s ease-out infinite;
-          }
-          @keyframes triangleAnimation {
-            0%{
+        }
+
+        @keyframes triangleAnimation {
+            0% {
                 opacity: 1;
             }
-            50%{
+
+            50% {
                 opacity: .5;
             }
-            100%{
+
+            100% {
                 opacity: 1;
             }
-          }
-          .triangleUp {
+        }
+
+        .triangleUp {
             position: absolute;
             bottom: 3vh;
             width: 0;
@@ -600,21 +604,23 @@
             border-top: 15px solid transparent;
             border-left: 100px solid transparent;
             border-right: 100px solid transparent;
-            border-bottom: 36.6px solid rgba(116, 32, 32, 0.267); 
+            border-bottom: 36.6px solid rgba(116, 32, 32, 0.267);
             box-shadow: 0 20px 15px -15px rgba(0, 0, 0, 0.507);
             animation: triangleAnimation 2s ease-out infinite;
-          }
+        }
     }
 
     @media screen and (max-width: 599px) {
-        .buttonAllFeatures{
-            .triangleDown{
+        .buttonAllFeatures {
+            .triangleDown {
                 top: 4vh;
             }
-            .triangleUp{
+
+            .triangleUp {
                 bottom: 4vh;
             }
         }
+
         .left,
         .right {
             font-size: .75rem;
@@ -628,12 +634,13 @@
     }
 }
 
-.bestOfferContainer{
+.bestOfferContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
     .optPrices,
-    .forWhatPlace{
+    .forWhatPlace {
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -641,7 +648,8 @@
         align-items: start;
         line-height: 2;
         font-size: 1.3rem;
-        span{
+
+        span {
             width: 100%;
             margin: 1vh;
             margin-left: 0;
@@ -653,9 +661,11 @@
             // background-color: rgba(153, 2, 2, 0.418);
         }
     }
-    .optPrices{
+
+    .optPrices {
         align-items: end;
-        span{
+
+        span {
             border: 3px solid rgb(153, 2, 2);
             background-color: rgba(77, 77, 77, 0.418);
             color: white;
