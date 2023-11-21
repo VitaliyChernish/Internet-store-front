@@ -20,7 +20,7 @@ const CameraContent7 = ({ linkOfOffer }) => {
 
     useEffect(() => {
         const encodedLink = encodeURIComponent(linkOfOffer)
-        const url = `${serverApi}:5000/api/offers/choicerouter?link=${encodedLink}`;
+        const url = `${serverApi}/api/offers/choicerouter?link=${encodedLink}`;
         fetch(url, {
             method: 'GET',
         })
