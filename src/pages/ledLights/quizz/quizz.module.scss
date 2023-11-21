@@ -1,0 +1,152 @@
+@import '../../../style.scss';
+
+.quizzMain {
+    .quizz {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        overflow-y: hidden;
+        margin-top: 1%;
+
+        .variant1,
+        .variant2 {
+            position: relative;
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                position: relative;
+                width: 100%;
+                padding-top: 18vh;
+                padding-bottom: 18vh;
+                background-color: rgba(77, 77, 77, 0.867);
+                transition-duration: .5s;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        button:hover {
+            background-color: rgba(77, 77, 77, 0.267);
+        }
+        @media screen and (max-width: 599px) {
+            button:hover {
+                background-color: rgba(77, 77, 77, 0.267);
+            }
+        }
+
+
+        .asks {
+            padding: 5vh;
+            font-size: 1.8rem;
+            font-weight: 600;
+            background-color: rgb(23, 23, 25);
+            color: $accentColor;
+        }
+
+        .unswers {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            button {
+                font-size: 1.5rem;
+            }
+        }
+
+        .imageQuiz {
+            position: absolute;
+            top: 17vh;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .descriptions {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            .descriptionItems {
+                text-align: start;
+                margin: 4.3vh;
+                font-size: 1.2rem;
+                font-weight: 100;
+                background-color: rgba(77, 77, 77, 0.923);
+                padding: 1vh;
+
+                .head {
+                    color: white;
+                    background-image: linear-gradient(to right, red, rgba(0, 0, 0, 0));
+                    // border: 5px solid $accentColor;
+                    padding: .5vh;
+                }
+
+                .descrs {
+                    color: rgba(255, 255, 255, 0.747);
+                }
+
+                img {
+                    position: absolute;
+                    height: 100%;
+                    top: 0;
+                    left: -28%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 599px) {
+        .quizz {
+
+            .asks {
+                font-size: 1.2rem;
+            }
+
+            .unswers {
+                button {}
+            }
+
+            .imageQuiz {
+                position: absolute;
+                bottom: 0vh;
+                width: 120%;
+                left: -10%;
+                z-index: -1;
+            }
+
+            .descriptions {
+                .descriptionItems {
+                    background-image: url('../statik/lightning.png');
+                    font-size: 1rem;
+                    margin: 3.3vh;
+
+                    .head {}
+
+                    .descrs {
+                        font-size: small;
+                    }
+
+                    img {
+                        position: absolute;
+                        height: 100%;
+                        top: 0;
+                        left: -50%;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}
